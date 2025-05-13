@@ -1,10 +1,6 @@
 document.getElementById("floorplan").addEventListener("load", function () {
     
     const svgDoc = document.getElementById("floorplan").contentDocument;
-    if (!svgDoc) {
-        console.error("SVG contentDocument not found");
-        return;
-    }
 
     // Define the rooms (lights)
     const rooms = [
@@ -33,9 +29,7 @@ document.getElementById("floorplan").addEventListener("load", function () {
                     hass.callService("light", "toggle", { entity_id: entityId });
                 }
             });
-        } else {
-            console.warn(`Room ID ${roomId} not found in SVG`);
-        }
+        } 
     });
 
     // Make fan interactive (toggle spinning)
@@ -48,9 +42,7 @@ document.getElementById("floorplan").addEventListener("load", function () {
                 hass.callService("switch", "toggle", { entity_id: "switch.udestue_fan" });
             }
         });
-    } else {
-        console.warn("Fan ID switch.udestue_fan not found in SVG");
-    }
+    } 
 
     // Function to generate random temperature
     function getRandomTemperature(min, max) {
@@ -78,25 +70,19 @@ document.getElementById("floorplan").addEventListener("load", function () {
         if (acTempElement) {
             acTempElement.textContent = temperatures["sensor.ac_temperature"];
              acTempElement.style.fill = "white";
-        } else {
-            console.warn("AC temp element tspan148 not found in SVG");
-        }
+        } 
 
         if (livingroom) {
             livingroom.textContent = temperatures["sensor.livingroom"];
              livingroom.style.fill = "white";
-        } else {
-            console.warn("Livingroom temp element tspan148-9 not found in SVG");
-        }
+        } 
 
         if (udestue) {
             udestue.textContent = temperatures["sensor.udestue"];
                udestue.style.fill = "white";
-        } else {
-            console.warn("Udestue temp element tspan148-9-7 not found in SVG");
-        }
+        } 
     }
 
     // Update temperature every second
-    setInterval(updateTemperatures, 1000);
+    setInterval(updateTemperatures, 3000);
 });
