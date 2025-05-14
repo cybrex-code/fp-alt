@@ -1659,7 +1659,8 @@
                        y="236.22519"
                        inkscape:label="gate"
                        clip-path="url(#clipPath6)"
-                       style="display:inline" /></g><g
+                       style="display:inline"
+                       onclick="toggleGate(this)" /></g><g
                      inkscape:groupmode="layer"
                      id="sensor"
                      inkscape:label="sensor"><text
@@ -1723,6 +1724,37 @@
 function toggleLights(element) {
   const currentOpacity = parseFloat(getComputedStyle(element).opacity);
   element.style.opacity = currentOpacity === 0 ? "1" : "0";
+}
+function toggleGate(element, max = 300, origin = 50, speed = 2) {
+  // Don't run if already animating
+  if (element.dataset.timer) return;
+  // Initialize state if not set
+  if (!element.dataset.atEnd) {
+    element.dataset.atEnd = "false";
+  }
+  let goingForward = element.dataset.atEnd === "false";
+  const interval = setInterval(() => {
+    let cx = parseInt(element.getAttribute("cx"));
+    if (goingForward) {
+      cx += speed;
+      if (cx >= max) {
+        cx = max;
+        clearInterval(interval);
+        element.dataset.timer = "";
+        element.dataset.atEnd = "true";
+      }
+    } else {
+      cx -= speed;
+      if (cx <= origin) {
+        cx = origin;
+        clearInterval(interval);
+        element.dataset.timer = "";
+        element.dataset.atEnd = "false";
+      }
+    }
+    element.setAttribute("cx", cx);
+  }, 20);
+  element.dataset.timer = interval;
 }
 </script>
 
