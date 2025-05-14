@@ -1616,8 +1616,7 @@
                      inkscape:groupmode="layer"
                      id="layer5"
                      inkscape:label="lights overlay"
-                     style="display:inline"
-                     onclick="toggleLights(this)" ><rect
+                     style="display:inline"><rect
                        style="font-variation-settings:'wght' 700;display:inline;opacity:0.75;fill:#0c0c0c;fill-opacity:1;stroke:none;stroke-width:1.104;stroke-linecap:square;stroke-miterlimit:3;stroke-dasharray:none;filter:url(#filter15)"
                        id="domain.lights_middle"
                        width="30.469051"
@@ -1626,7 +1625,8 @@
                        y="19.429539"
                        rx="0.78026247"
                        ry="0.78026277"
-                       inkscape:label="lights_middle" /></g><g
+                       inkscape:label="lights_middle"
+                       onclick="toggleLights(this)" /></g><g
                      inkscape:groupmode="layer"
                      id="layer4"
                      inkscape:label="gate"
@@ -1720,7 +1720,7 @@
 </body>
 
 <script>
-function toggleOpacity(element) {
+function toggleLights(element) {
   const currentOpacity = parseFloat(getComputedStyle(element).opacity);
   element.style.opacity = currentOpacity === 0 ? "1" : "0";
 }
