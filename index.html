@@ -8,17 +8,17 @@
 <h2>SVG Toggle Fill / None</h2>
 
 <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
-  <circle id="circle2" cx="50" cy="50" r="25" style="fill:red;" onclick="toggleFill()" />
+  <circle id="circle2" cx="50" cy="50" r="25" style="fill:red;" onclick="toggleOpacity()" />
   Sorry, your browser does not support inline SVG.
 </svg>
 
 <script>
-function toggleFill() {
+function toggleOpacity() {
   const circle = document.getElementById("circle2");
-  const currentFill = circle.style.fill;
+  const currentOpacity = parseFloat(getComputedStyle(circle).opacity);
 
-  // Toggle between red and none
-  circle.style.fill = (currentFill === "none" || currentFill === "") ? "red" : "none";
+  // Toggle between visible (1) and hidden (0)
+  circle.style.opacity = currentOpacity === 0 ? "1" : "0";
 }
 </script>
 
