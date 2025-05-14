@@ -1626,7 +1626,7 @@
                        rx="0.78026247"
                        ry="0.78026277"
                        inkscape:label="lights_middle"
-                       onclick="toggleLights(this)" /></g><g
+                       onclick="toggleShine(this)" /></g><g
                      inkscape:groupmode="layer"
                      id="layer4"
                      inkscape:label="gate"
@@ -1724,6 +1724,10 @@
 function toggleLights(element) {
   const currentOpacity = parseFloat(getComputedStyle(element).opacity);
   element.style.opacity = currentOpacity === 0 ? "1" : "0";
+}
+function toggleShine(element) {
+  const currentOpacity = parseFloat(getComputedStyle(element).opacity);
+  element.style.opacity = currentOpacity === 0 ? "1" : "0.2";
 }
 function toggleGate(element, max = 300, origin = 50, speed = 2) {
   // Don't run if already animating
