@@ -1770,13 +1770,13 @@ const temperatures = {
     "temp": "25°C"
 };
 // Display temperatures
-const temp = svgDoc.getElementById("tspan1");
+const tempvar = svgDoc.getElementById("tspan1");
 function updateTemperatures() {
     // Update the temperatures randomly between 23°C and 27°C
-    temperatures["temp"] = getRandomTemperature(23, 27);
-    if (temp) {
-        temp.textContent = temperatures["temp"];
-        temp.style.fill = "white";
+    temperatures["tempvar"] = getRandomTemperature(23, 27);
+    if (tempvar) {
+        tempvar.textContent = temperatures["temp"];
+        tempvar.style.fill = "white";
         }
 }
 // Update temperature every second
