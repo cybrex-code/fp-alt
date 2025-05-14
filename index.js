@@ -14,8 +14,8 @@ document.getElementById("floorplan").addEventListener("load", function () {
     ];
 
     // Make rooms clickable (toggle light)
-    rooms.forEach(roomId => {  
-        const room = svgDoc.getElementById(roomId);
+    element_light.forEach(element_lightId => {  
+        const room = svgDoc.getElementById(element_lightId);
         if (room) {
             room.style.cursor = "pointer";
             room.addEventListener("click", function () {
