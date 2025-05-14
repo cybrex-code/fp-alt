@@ -1738,25 +1738,25 @@ function toggleGate(element, max = 300, origin = 50, speed = 2) {
   }
   let goingForward = element.dataset.atEnd === "false";
   const interval = setInterval(() => {
-    let cx = parseInt(element.getAttribute("cx"));
+    let x = parseInt(element.getAttribute("x"));
     if (goingForward) {
-      cx += speed;
-      if (cx >= max) {
-        cx = max;
+      x += speed;
+      if (x >= max) {
+        x = max;
         clearInterval(interval);
         element.dataset.timer = "";
         element.dataset.atEnd = "true";
       }
     } else {
-      cx -= speed;
-      if (cx <= origin) {
-        cx = origin;
+      x -= speed;
+      if (x <= origin) {
+        x = origin;
         clearInterval(interval);
         element.dataset.timer = "";
         element.dataset.atEnd = "false";
       }
     }
-    element.setAttribute("cx", cx);
+    element.setAttribute("x", x);
   }, 20);
   element.dataset.timer = interval;
 }
