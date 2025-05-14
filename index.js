@@ -2,17 +2,15 @@ document.getElementById("floorplan").addEventListener("load", function () {
     
     const svgDoc = document.getElementById("floorplan").contentDocument;
 
-    // Define the rooms (lights)
-    const rooms = [
-        "area.bedroom",
-        "area.guesttoilet",
-        "area.hallway",
-        "area.office",
-        "area.livingroom",
-        "area.guestroom",
-        "area.kitchen",
-        "area.restroom",
-        "area.udestue"
+    // Define the light controls
+    const element_light = [
+        "domain.wl1",
+        "domain.dlg1",
+        "domain.dlg2",
+        "domain.dlg3",
+        "domain.dlg4",
+        "domain.dlg5",
+        "domain.lights_middle",
     ];
 
     // Make rooms clickable (toggle light)
@@ -25,7 +23,7 @@ document.getElementById("floorplan").addEventListener("load", function () {
                 room.classList.toggle("light-off");
                 // Home Assistant: Toggle light
                 if (window.hass) {
-                    const entityId = roomId.replace("area.", "light.");
+                    const entityId = roomId.replace("domain.", "light.");
                     hass.callService("light", "toggle", { entity_id: entityId });
                 }
             });
