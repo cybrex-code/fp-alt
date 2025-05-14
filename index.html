@@ -1767,17 +1767,17 @@ function getRandomTemperature(min, max) {
 }
 // Temperature display using Home Assistant states or fallback
 const temperatures = {
-    "temp": "25°C"
+    "temp": "23°C"
 };
 // Display temperatures
 const tempvar = svgDoc.getElementById("tspan1");
 function updateTemperatures() {
     // Update the temperatures randomly between 23°C and 27°C
-    temperatures["tempvar"] = getRandomTemperature(23, 27);
+    temperatures["temp"] = getRandomTemperature(23, 27);
     if (tempvar) {
         tempvar.textContent = temperatures["temp"];
         tempvar.style.fill = "white";
-        }
+    }
 }
 // Update temperature every second
 setInterval(updateTemperatures, 3000);
