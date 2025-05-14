@@ -1761,6 +1761,26 @@ function toggleGate(element, max = 125, origin = 17.7205, speed = 1) {
   }, 20);
   element.dataset.timer = interval;
 }
+// Function to generate random temperature
+    function getRandomTemperature(min, max) {
+        return (Math.random() * (max - min) + min).toFixed(1) + "°C";
+    }
+    // Temperature display using Home Assistant states or fallback
+    const temperatures = {
+        "temp": "25°C"
+    };
+    // Display temperatures
+    const temp = svgDoc.getElementById("temp");
+    function updateTemperatures() {
+        // Update the temperatures randomly between 23°C and 27°C
+        temperatures["temp"] = getRandomTemperature(23, 27);
+        if (temp) {
+            temp.textContent = temperatures["temp"];
+             temp.style.fill = "white";
+        }
+    }
+    // Update temperature every second
+    setInterval(updateTemperatures, 3000);
 </script>
 
 </html>
