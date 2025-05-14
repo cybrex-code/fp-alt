@@ -1726,10 +1726,12 @@ function toggleLights(element) {
   const currentOpacity = parseFloat(getComputedStyle(element).opacity);
   element.style.opacity = currentOpacity === 0 ? "1" : "0";
 }
+
 function toggleShine(element) {
   const currentOpacity = parseFloat(getComputedStyle(element).opacity);
   element.style.opacity = currentOpacity === 0 ? "0.5" : "0";
 }
+
 function toggleGate(element, max = 125, origin = 17.7205, speed = 1) {
   // Don't run if already animating
   if (element.dataset.timer) return;
@@ -1761,6 +1763,24 @@ function toggleGate(element, max = 125, origin = 17.7205, speed = 1) {
   }, 20);
   element.dataset.timer = interval;
 }
+
+// CCTV Bullet
+// Get the modal
+var modal = document.getElementById("myModal");
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("cctv_bullet");
+var modalImg = document.getElementById("img01");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = "https://i.imgur.com/OpgieSl.png";
+}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
 // Function to generate random temperature
 function getRandomTemperature(min, max) {
     return (Math.random() * (max - min) + min).toFixed(1) + "°C";
