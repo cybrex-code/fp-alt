@@ -40,70 +40,18 @@ function toggleGate(element, max = 125, origin = 17.7205, speed = 1) {
   element.dataset.timer = interval;
 }
 
-// // CCTV Bullet
-// // Get the modal
-// var modal = document.getElementById("myModal");
-// // Get the image and insert it inside the modal - use its "alt" text as a caption
-// var img = document.getElementById("cctv_bullet");
-// var modalImg = document.getElementById("img01");
-// img.onclick = function(){
-//   modal.style.display = "block";
-//   modalImg.src = "https://i.imgur.com/fned5TC.png";
-// }
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() { 
-//   modal.style.display = "none";
-// }
-// // CCTV Dome
-// // Get the modal
-// var modal = document.getElementById("myModal");
-// // Get the image and insert it inside the modal - use its "alt" text as a caption
-// var img = document.getElementById("cctv_dome");
-// var modalImg = document.getElementById("img01");
-// img.onclick = function(){
-//   modal.style.display = "block";
-//   modalImg.src = "https://i.imgur.com/OpgieSl.png";
-// }
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() { 
-//   modal.style.display = "none";
-// }
-// // Car Click
-// // Get the modal
-// var modal = document.getElementById("myModal");
-// // Get the image and insert it inside the modal - use its "alt" text as a caption
-// var img = document.getElementById("car");
-// var modalImg = document.getElementById("img01");
-// img.onclick = function(){
-//   modal.style.display = "block";
-//   modalImg.src = "https://i.imgur.com/GsvRW1H.jpeg";
-// }
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() { 
-//   modal.style.display = "none";
-// }
-// // Intercom
-// // Get the modal
-// var modal = document.getElementById("myModal");
-// // Get the image and insert it inside the modal - use its "alt" text as a caption
-// var img = document.getElementById("intercom");
-// var modalImg = document.getElementById("img01");
-// img.onclick = function(){
-//   modal.style.display = "block";
-//   modalImg.src = "/fp-alt/res/intercom_sampleb3.jpg";
-// }
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() { 
-//   modal.style.display = "none";
-// }
+function showPopup(imgId) {
+  const image = document.getElementById(imgId);
+  const overlay = document.getElementById('overlay' + imgId.replace(/\D/g, ''));
+  image.classList.add('active');
+  overlay.classList.add('active');
+}
+function hidePopup(imgId) {
+  const image = document.getElementById(imgId);
+  const overlay = document.getElementById('overlay' + imgId.replace(/\D/g, ''));
+  image.classList.remove('active');
+  overlay.classList.remove('active');
+}
 
 function getRandomTemperature(min, max) {
   return (Math.random() * (max - min) + min).toFixed(1) + "°C";
@@ -119,20 +67,3 @@ function updateTemperatures() {
 }
 // Retry updating every 5 seconds
 setInterval(updateTemperatures, 5000);
-
-
-// function getRandomTemperature(min, max) {
-//     return (Math.random() * (max - min) + min).toFixed(1) + "°C";
-// }
-// const temperatures = {
-//     "temp": "23°C"
-// };
-// const tempvar = document.getElementById("tspan1");
-// function updateTemperatures() {
-//     temperatures["temp"] = getRandomTemperature(23, 27);
-//     if (tempvar) {
-//         tempvar.textContent = temperatures["temp"];
-//     }
-// }
-// // Update temperature every second
-// setInterval(updateTemperatures, 5000);
