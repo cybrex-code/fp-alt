@@ -2,10 +2,6 @@ body {
   background-color: grey;
 }
 
-#floorplan {
-  max-width: 50vw;
-}
-
 .popup-image {
   position: fixed;
   top: 50%;
