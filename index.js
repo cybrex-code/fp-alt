@@ -40,70 +40,70 @@ function toggleGate(element, max = 125, origin = 17.7205, speed = 1) {
   element.dataset.timer = interval;
 }
 
-// CCTV Bullet
-// Get the modal
-var modal = document.getElementById("myModal");
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("cctv_bullet");
-var modalImg = document.getElementById("img01");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = "https://i.imgur.com/fned5TC.png";
-}
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
-}
-// CCTV Dome
-// Get the modal
-var modal = document.getElementById("myModal");
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("cctv_dome");
-var modalImg = document.getElementById("img01");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = "https://i.imgur.com/OpgieSl.png";
-}
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
-}
-// Car Click
-// Get the modal
-var modal = document.getElementById("myModal");
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("car");
-var modalImg = document.getElementById("img01");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = "https://i.imgur.com/GsvRW1H.jpeg";
-}
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
-}
-// Intercom
-// Get the modal
-var modal = document.getElementById("myModal");
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("intercom");
-var modalImg = document.getElementById("img01");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = "/fp-alt/res/intercom_sampleb3.jpg";
-}
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
-}
+// // CCTV Bullet
+// // Get the modal
+// var modal = document.getElementById("myModal");
+// // Get the image and insert it inside the modal - use its "alt" text as a caption
+// var img = document.getElementById("cctv_bullet");
+// var modalImg = document.getElementById("img01");
+// img.onclick = function(){
+//   modal.style.display = "block";
+//   modalImg.src = "https://i.imgur.com/fned5TC.png";
+// }
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close")[0];
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() { 
+//   modal.style.display = "none";
+// }
+// // CCTV Dome
+// // Get the modal
+// var modal = document.getElementById("myModal");
+// // Get the image and insert it inside the modal - use its "alt" text as a caption
+// var img = document.getElementById("cctv_dome");
+// var modalImg = document.getElementById("img01");
+// img.onclick = function(){
+//   modal.style.display = "block";
+//   modalImg.src = "https://i.imgur.com/OpgieSl.png";
+// }
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close")[0];
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() { 
+//   modal.style.display = "none";
+// }
+// // Car Click
+// // Get the modal
+// var modal = document.getElementById("myModal");
+// // Get the image and insert it inside the modal - use its "alt" text as a caption
+// var img = document.getElementById("car");
+// var modalImg = document.getElementById("img01");
+// img.onclick = function(){
+//   modal.style.display = "block";
+//   modalImg.src = "https://i.imgur.com/GsvRW1H.jpeg";
+// }
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close")[0];
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() { 
+//   modal.style.display = "none";
+// }
+// // Intercom
+// // Get the modal
+// var modal = document.getElementById("myModal");
+// // Get the image and insert it inside the modal - use its "alt" text as a caption
+// var img = document.getElementById("intercom");
+// var modalImg = document.getElementById("img01");
+// img.onclick = function(){
+//   modal.style.display = "block";
+//   modalImg.src = "/fp-alt/res/intercom_sampleb3.jpg";
+// }
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close")[0];
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() { 
+//   modal.style.display = "none";
+// }
 
 // Function to generate random temperature
 function getRandomTemperature(min, max) {
