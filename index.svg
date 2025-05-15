@@ -1668,7 +1668,8 @@
        id="awning_extend"
        x="48.710838"
        y="120.53403"
-       inkscape:label="awning_extend" /></g><g
+       inkscape:label="awning_extend"
+       onclick="parent.toggleLights(this)" /></g><g
      inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="other" /><image
