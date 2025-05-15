@@ -1632,7 +1632,8 @@
        x="-4.5531931"
        y="245.71039"
        inkscape:label="intercom"
-       style="stroke-width:0.822237" /><image
+       style="stroke-width:0.822237"
+       onclick="parent.showPopup('img4')" /><image
        width="121.1279"
        height="73.252045"
        preserveAspectRatio="none"
@@ -1681,7 +1682,8 @@
      id="cctv_dome"
      x="7.9899921"
      y="136.7166"
-     inkscape:label="cctv_dome" /><image
+     inkscape:label="cctv_dome"
+     onclick="parent.showPopup('img2')" /><image
      width="10.810736"
      height="8.7951746"
      preserveAspectRatio="none"
@@ -1690,9 +1692,11 @@
      id="cctv_bullet"
      x="131.78111"
      y="66.880066"
-     inkscape:label="cctv_bullet" /><path
+     inkscape:label="cctv_bullet"
+     onclick="parent.showPopup('img1')" /><path
      style="font-variation-settings:'wght' 700;opacity:0;fill:#0c0c0c;fill-opacity:1;stroke:none;stroke-width:1.104;stroke-linecap:square;stroke-miterlimit:3;stroke-dasharray:none"
      d="m 22.434393,139.09345 c 0,-8.40768 0.133717,13.12375 0.133717,18.88332 l 4.23152,0.17631 0.176313,8.28673 26.623319,0.17631 -0.176316,-27.85751 z"
      id="car"
      sodipodi:nodetypes="ccccccc"
-     inkscape:label="car_click" /></svg>
+     inkscape:label="car_click"
+     onclick="parent.showPopup('img3')" /></svg>
