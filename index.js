@@ -112,7 +112,7 @@ function updateTemperatures() {
   const svgObject = document.getElementById("floorplan");
   if (!svgObject || !svgObject.contentDocument) return;
   const svgDoc = svgObject.contentDocument;
-  const tempTspan = svgDoc.getElementById("tspan1");
+  const tempTspan = svgDoc.getElementById("temp");
   if (tempTspan) {
     tempTspan.textContent = getRandomTemperature(23, 27);
   }
