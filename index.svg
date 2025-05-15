@@ -1492,7 +1492,8 @@
        id="domain.wl1"
        x="87.637077"
        y="134.61253"
-       inkscape:label="wl1" /><image
+       inkscape:label="wl1"
+       onclick="parent.toggleLights(this)" /><image
        width="37.24313"
        height="11.909138"
        preserveAspectRatio="none"
@@ -1501,11 +1502,13 @@
        id="domain.dlg2"
        x="55.21949"
        y="10.033429"
-       inkscape:label="dlg2" /><g
+       inkscape:label="dlg2"
+       onclick="parent.toggleLights(this)" /><g
        id="domain.dlg3"
        inkscape:label="dlg3"
        transform="matrix(1.1779731,0,0,1.1868115,-18.554074,-12.810502)"
-       style="stroke-width:1.01844"><image
+       style="stroke-width:1.01844"
+       onclick="parent.toggleLights(this)" ><image
          width="38.099998"
          height="17.197916"
          preserveAspectRatio="none"
@@ -1527,7 +1530,8 @@
        id="domain.dlg1"
        inkscape:label="dlg1"
        transform="matrix(1.2041875,0,0,1.2041875,-113.79384,-20.462708)"
-       style="stroke:none"><image
+       style="stroke:none"
+       onclick="parent.toggleLights(this)" ><image
          width="38.099998"
          height="17.197916"
          preserveAspectRatio="none"
@@ -1549,7 +1553,8 @@
        id="domain.dlg4"
        inkscape:label="dlg4"
        transform="matrix(1.2041875,0,0,0.72406028,-26.098644,-1.6066381)"
-       style="display:inline;stroke-width:1.28961"><image
+       style="display:inline;stroke-width:1.28961"
+       onclick="parent.toggleLights(this)" ><image
          width="14.588448"
          height="34.131248"
          preserveAspectRatio="none"
@@ -1571,7 +1576,8 @@
        id="domain.dlg5"
        inkscape:label="dlg5"
        transform="matrix(1.2041875,0,0,1.2041875,61.499292,-64.834153)"
-       style="display:inline"><image
+       style="display:inline"
+       onclick="parent.toggleLights(this)" ><image
          width="14.588448"
          height="15.895688"
          preserveAspectRatio="none"
@@ -1602,7 +1608,8 @@
        y="19.429539"
        rx="0.78026247"
        ry="0.78026277"
-       inkscape:label="lights_middle" /></g><g
+       inkscape:label="lights_middle"
+       onclick="parent.toggleShine(this)" /></g><g
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="gate"
@@ -1635,7 +1642,8 @@
        y="236.22519"
        inkscape:label="gate"
        clip-path="url(#clipPath6)"
-       style="display:inline" /></g><g
+       style="display:inline"
+       onclick="parent.toggleGate(this)" /></g><g
      inkscape:groupmode="layer"
      id="sensor"
      inkscape:label="sensor"><text
