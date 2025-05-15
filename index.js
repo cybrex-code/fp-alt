@@ -105,22 +105,34 @@ function toggleGate(element, max = 125, origin = 17.7205, speed = 1) {
 //   modal.style.display = "none";
 // }
 
-// Function to generate random temperature
 function getRandomTemperature(min, max) {
-    return (Math.random() * (max - min) + min).toFixed(1) + "°C";
+  return (Math.random() * (max - min) + min).toFixed(1) + "°C";
 }
-// Temperature display using Home Assistant states or fallback
-const temperatures = {
-    "temp": "23°C"
-};
-// Display temperatures
-const tempvar = document.getElementById("tspan1");
 function updateTemperatures() {
-    // Update the temperatures randomly between 23°C and 27°C
-    temperatures["temp"] = getRandomTemperature(23, 27);
-    if (tempvar) {
-        tempvar.textContent = temperatures["temp"];
-    }
+  const svgObject = document.getElementById("floorplan");
+  if (!svgObject || !svgObject.contentDocument) return;
+  const svgDoc = svgObject.contentDocument;
+  const tempTspan = svgDoc.getElementById("tspan1");
+  if (tempTspan) {
+    tempTspan.textContent = getRandomTemperature(23, 27);
+  }
 }
-// Update temperature every second
+// Retry updating every 5 seconds
 setInterval(updateTemperatures, 5000);
+
+
+// function getRandomTemperature(min, max) {
+//     return (Math.random() * (max - min) + min).toFixed(1) + "°C";
+// }
+// const temperatures = {
+//     "temp": "23°C"
+// };
+// const tempvar = document.getElementById("tspan1");
+// function updateTemperatures() {
+//     temperatures["temp"] = getRandomTemperature(23, 27);
+//     if (tempvar) {
+//         tempvar.textContent = temperatures["temp"];
+//     }
+// }
+// // Update temperature every second
+// setInterval(updateTemperatures, 5000);
