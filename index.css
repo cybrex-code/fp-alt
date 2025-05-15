@@ -2,7 +2,7 @@ body {
   background-color: grey;
 }
 
-.floorplan {
+#floorplan {
   max-width: 50vw;
 }
 
